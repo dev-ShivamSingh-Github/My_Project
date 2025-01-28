@@ -17,11 +17,6 @@ body{
 	background-color: var(--bg);
 	color: var(--text);
 }
-.title{
-	text-align:center;
-	margin:5px 5px 5px 5px;
-	padding:0px 0px 0px 0px;
-}
 .navbar{
 	text-align:center;
 	margin:0px 0px 0px 0px;
@@ -31,11 +26,38 @@ body{
 		padding:0px 0px 0px 0px;
 		margin:0px 2px 0px 2px;
 		overflow:hidden;
-	}li{
+		}
+	li{
 		padding:0px 0px 0px 0px;
 		margin:0px 0px 0px 0px;
 		float:left;
+		}
 }
+.title{
+	text-align:center;
+	margin:5px 5px 5px 5px;
+	padding:0px 0px 0px 0px;
+}
+.button{
+	background-color: #c28424;
+	color:black;
+	border:1px #633110 solid;
+	border-radius:25px;
+	text-align:center;
+	padding:2px;
+	font-size:20px;
+	cursor:pointer;
+	width:100px;
+	height:30px;
+}
+input, select{
+	text-align:center;
+	background-color: var(--bg);
+	color: var(--text);
+	border:1px solid #108b8c;
+}
+
+
 a{
 	display: inline-block;
 	padding:5px;
