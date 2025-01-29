@@ -16,6 +16,7 @@ body{
 	font-family: "Source Sans Pro",sans-serif;
 	background-color: var(--bg);
 	color: var(--text);
+	user-select: none;
 }
 h1{
 	text-align:center;
@@ -23,6 +24,7 @@ h1{
 .main{
 	text-align:center;
 	button{
+		-webkit-tap-highlight-color: transparent;
 		border:2px solid var(--text);
 		border-radius:25px;
 		padding:0.84%;
@@ -37,7 +39,7 @@ h1{
 		background-color:#108b8c;
 		color:#052830;
 		font-size:140%;
-		text-transform:uppercase;
+		/*text-transform:uppercase;*/
 	}
 	button:active{
 		background-color:#ff9800;
