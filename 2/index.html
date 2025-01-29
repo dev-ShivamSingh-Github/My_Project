@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+	<head>
+		<title>Rock&nbsp;Paper&nbsp;Scissors</title>
+		<meta charset="UTF-8">
+		<meta name="author" content="Shivam Singh">
+		<meta name="description" content="Numerical Analysis">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="./style.css">
+	</head>
+	<body>
+		<h1>Please select your choice</h1>
+		<div class="main">
+			<button class="buttons" type="button" onClick="r()">🪨<br>Rock<br></button>
+			<button class="buttons" type="button" onClick="p()">📃<br>Paper<br></button>
+			<button class="buttons" type="button" onClick="s()">✂️<br>Scissors<br></button>
+			<br><br><hr>
+			<table>
+				<tr>
+					<td rowspan="2">Result</td>
+					<td>Computer</td>
+					<td>You</td>
+					<td>Outcome</td>
+				</tr>
+				<tr>
+					<td id="c_m">null</td>
+					<td id="p_m">null</td>
+					<td id="g_r">null</td>
+				</tr>
+			</table>
+			<br><hr>
+			<table>
+				<tr>
+					<td rowspan="2">Score</td>
+					<td>WIN</td>
+					<td>LOOSE</td>
+					<td>TIE</td>
+				</tr>
+				<tr>
+					<td id="r_w">0</td>
+					<td id="r_l">0</td>
+					<td id="r_t">0</td>
+				</tr>
+			</table>
+			<br><hr>
+			<button class="buttons" type="button" onClick="reset()">🔁<br>Reset</button>
+		</div>
+		<script src="./script.js"></script>
+	</body>
+</html>
