@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+	<head>
+		<title></title>
+		<meta charset="UTF-8">
+		<meta name="author" content="Shivam Singh">
+		<meta name="description" content="Tic Tac Toe">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div>Let's play TIC TAC TOE</div>
+		<br><hr>
+		<table>
+			<tr>
+				<td>Score</td>
+				<td>WIN</td>
+				<td>LOOSE</td>
+				<td>TIE</td>
+			</tr>
+			<tr>
+				<td><button class="reset" onClick="reset()">Reset</button></td>
+				<td id="r_w">0</td>
+				<td id="r_l">0</td>
+				<td id="r_t">0</td>
+			</tr>
+		</table>
+		<hr><br>
+		<div class="main" id="main">
+			<button class="buttons" id="x1"></button>
+			<button class="buttons" id="x2"></button>
+			<button class="buttons" id="x3"></button>
+			<br>
+			<button class="buttons" id="y1"></button>
+			<button class="buttons" id="y2"></button>
+			<button class="buttons" id="y3"></button>
+			<br>
+			<button class="buttons" id="z1"></button>
+			<button class="buttons" id="z2"></button>
+			<button class="buttons" id="z3"></button>
+		</div>
+		<script src="./script.js"></script>
+	</body>
+</html>
