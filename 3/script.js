@@ -1,42 +1,65 @@
+var win = loose = tie = 0;
+var arr = [0,0,0,0,0,0,0,0,0];
+const btn = document.querySelectorAll('.buttons');
+
+btn.forEach(button => {
+	button.addEventListener('click', () => {
+		button.disabled = true;
+		button.style.backgroundColor = "#108b8c";
+		console.log(button.id);
+		console.log(btn[button.id]);
+		arr[button.id] = 1;
+		device(arr[device.id]);
+	});
+});
+
+function main(){
+	console.log(`Main Function`);
+}
+function device(arr){
+	do{
+		var random = Math.ceil(Math.random()*9)-1;
+		if(random==arr){
+			var random = Math.ceil(Math.random()*9)-1;
+		}
+		else{
+			break;
+		}	
+	}while(0==0);
+	btn[random].style.backgroundColor = "#ff9800";	
+}
+function checkWinner(){
+	//Check Rows
+	for(var i=0; i<3; i++){
+		if(arr[i][0] == arr[i][1] && arr[i][0] == arr[i][2]){
+			win++;
+		}
+	}
+	//Check Column
+	for(i=0; i<3; i++){
+		if(arr[0][i] == arr[1][i] && arr[0][i] == arr[2][i]){
+			win++;
+		}
+	}
+	//Check Diagonal
+	for(i=0; i<3; i++){
+		if(arr[0][0] == arr[1][1] && arr[0][0] == arr[2][2]){
+			win++;
+		}
+	}
+	for(i=0; i<3; i++){
+		if(arr[0][2] == arr[1][1] && arr[0][2] == arr[2][0]){
+			win++;
+		}
+	}
+	tie++;
+}
+function restart(){
+	console.log(`Game restarted`);
+}
+
 function reset(){
 	window.location.reload();
 }
-var x1 = document.getElementById("x1");
-var x2 = document.getElementById("x2");
-var x3 = document.getElementById("x3");
-var y1 = document.getElementById("y1");
-var y2 = document.getElementById("y2");
-var y3 = document.getElementById("y3");
-var z1 = document.getElementById("z1");
-var z2 = document.getElementById("z2");
-var z3 = document.getElementById("z3");
-function main(){
-	x1.onclick = function(){
-		x1.textContent = "O";
-	};
-	x2.onclick = function(){
-		x2.textContent = "O";
-	};
-	x3.onclick = function(){
-		x3.textContent = "O";
-	};
-	y1.onclick = function(){
-		y1.textContent = "O";
-	};
-	y2.onclick = function(){
-		y2.textContent = "O";
-	};
-	y3.onclick = function(){
-		y3.textContent = "O";
-	};
-	z1.onclick = function(){
-		z1.textContent = "O";
-	};
-	z2.onclick = function(){
-		z2.textContent = "O";
-	};
-	z3.onclick = function(){
-		z3.textContent = "O";
-	};
-}
+
 main();
