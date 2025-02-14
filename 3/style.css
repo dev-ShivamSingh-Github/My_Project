@@ -27,6 +27,22 @@ table{
 	width:100%;
 	text-align:center;
 }
+.about{
+	-webkit-tap-highlight-color: transparent;
+	border:1px solid var(--text);
+	border-radius:3px;
+	color:var(--text);
+	disabled:true;
+	width:10%;
+	padding:10%;
+	margin:0%;
+}
+#bot{
+	background-color:#ff9800;
+}
+#you{
+	background-color:#108b8c;
+}
 .reset, .go{
 	-webkit-tap-highlight-color: transparent;
 	border:1px solid var(--text);
