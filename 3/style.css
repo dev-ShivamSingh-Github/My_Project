@@ -27,6 +27,11 @@ table{
 	width:100%;
 	text-align:center;
 }
+#hide{
+	display:none;
+	width:100%;
+	font-size:x-large;
+}
 .about{
 	-webkit-tap-highlight-color: transparent;
 	border:1px solid var(--text);
