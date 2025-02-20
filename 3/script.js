@@ -1,7 +1,7 @@
 /*
 Some Variables required for working of the game.
 */
-var win = 0,loose = 0,tie = 0,winner;
+var win = 0,lose = 0,tie = 0,winner;
 var arr = ['', '', '', '', '', '', '', '', ''];
 const btn = document.querySelectorAll('.buttons');
 /*
@@ -98,8 +98,8 @@ function showWinner(winner){
 		return 'over';
 	}
 	else if(winner=='X'){
-		loose++;
-		sW("r_l", loose, "You loose");
+		lose++;
+		sW("r_l", lose, "You lose");
 		return 'over';
 	}
 	else if(winner==="tie"){

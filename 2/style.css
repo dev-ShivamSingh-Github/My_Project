@@ -39,7 +39,6 @@ h1{
 		background-color:#108b8c;
 		color:#052830;
 		font-size:140%;
-		/*text-transform:uppercase;*/
 	}
 	button:active{
 		background-color:#ff9800;
@@ -49,17 +48,4 @@ h1{
 }
 table{
 	width:100%;
-}
-a{
-	display: inline-block;
-	padding:5px;
-	margin:5px;
-	text-decoration:none;
-	color:#108b8c;
-}
-a:hover{
-	color: #ff9800;
-}
-a:active{
-	color:red;
 }

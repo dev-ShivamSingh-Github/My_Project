@@ -11,9 +11,9 @@
 	<body>
 		<h1>Please select your choice</h1>
 		<div class="main">
-			<button class="buttons" type="button" onClick="r()">🪨<br>Rock<br></button>
-			<button class="buttons" type="button" onClick="p()">📃<br>Paper<br></button>
-			<button class="buttons" type="button" onClick="s()">✂️<br>Scissors<br></button>
+			<button id="r">🪨<br>Rock<br></button>
+			<button id="p">📃<br>Paper<br></button>
+			<button id="s">✂️<br>Scissors<br></button>
 			<br><br><hr>
 			<table>
 				<tr>
@@ -23,9 +23,9 @@
 					<td>Outcome</td>
 				</tr>
 				<tr>
-					<td id="c_m">null</td>
-					<td id="p_m">null</td>
-					<td id="g_r">null</td>
+					<td id="c_m">---</td>
+					<td id="p_m">---</td>
+					<td id="g_r">---</td>
 				</tr>
 			</table>
 			<br><hr>
@@ -43,7 +43,7 @@
 				</tr>
 			</table>
 			<br><hr>
-			<button class="buttons" type="button" onClick="reset()">🔁<br>Reset</button>
+			<button id="reset">🔁<br>Reset</button>
 		</div>
 		<script src="./script.js"></script>
 	</body>
