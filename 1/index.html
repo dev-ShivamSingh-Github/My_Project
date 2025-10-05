@@ -1,30 +1,50 @@
 <!DOCTYPE html>
 <html lang="en-IN">
 	<head>
+		<title>Rock&nbsp;Paper&nbsp;Scissors</title>
 		<meta charset="UTF-8">
 		<meta name="author" content="Shivam Singh">
-		<meta name="description" content="Numerical Analysis">
+		<meta name="description" content="Rock, Paper, and Scissors">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Numerical Analysis</title>
 		<link rel="stylesheet" href="./style.css">
-		<script src="script/script.js"></script>
 	</head>
 	<body>
-		<div class="title">Numerical Analysis</div>
-		<div class="navbar">
-			<ul>
-				<li><a href="./index.html">HOME</a></li>
-				<li><a href="./linear.html">Linear&nbsp;Alzebra</a></li>
-				<li><a href="./non_linear.html">Non-linear&nbsp;Alzebra</a></li>
-				<li><a href="./integration.html">Numerical&nbsp;Integration</a></li>
-				<li><a href="./ode.html">O.D.E.</a></li>
-				<li><a href="./shifting.html">Shifting</a></li>
-				<li><a href="./interpolation.html">Interpolation</a></li>
-			</ul>
+		<h1>Please select your choice</h1>
+		<div class="main">
+			<button id="r">🪨<br>Rock<br></button>
+			<button id="p">📃<br>Paper<br></button>
+			<button id="s">✂️<br>Scissors<br></button>
+			<br><br><hr>
+			<table>
+				<tr>
+					<td rowspan="2">Result</td>
+					<td>Computer</td>
+					<td>You</td>
+					<td>Outcome</td>
+				</tr>
+				<tr>
+					<td id="c_m">---</td>
+					<td id="p_m">---</td>
+					<td id="g_r">---</td>
+				</tr>
+			</table>
+			<br><hr>
+			<table>
+				<tr>
+					<td rowspan="2">Score</td>
+					<td>WIN</td>
+					<td>LOOSE</td>
+					<td>TIE</td>
+				</tr>
+				<tr>
+					<td id="r_w">0</td>
+					<td id="r_l">0</td>
+					<td id="r_t">0</td>
+				</tr>
+			</table>
+			<br><hr>
+			<button id="reset">🔁<br>Reset</button>
 		</div>
-		<div style="font-size:large; text-align:center;">
-			Welcome to the Index Page of Numerical Analysis<br>
-			Please Click on one of the menu.
-		</div>
+		<script src="./script.js"></script>
 	</body>
 </html>
