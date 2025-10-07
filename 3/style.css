@@ -10,10 +10,26 @@
 		--bg: #333333;
 	}
 }
-body{
-	margin:0;
-	padding:0;
+body, #task, #add{
+	margin:1%;
+	padding:1%;
 	font-family: "Source Sans Pro",sans-serif;
 	background-color: var(--bg);
 	color: var(--text);
+}
+.common{
+	width: -webkit-fill-available;
+	border: 1px solid var(--text);
+	border-radius: 15px;
+	font-size: 3em;
+}
+textarea{
+	resize: none;
+	box-sizing: border-box;
+	field-sizing: content;
+}
+.inp_container{
+	display: grid;
+	grid-template-columns: 0.8fr 0.2fr;
+	grid-template-rows: auto;
 }
