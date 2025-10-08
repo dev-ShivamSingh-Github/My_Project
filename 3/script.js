@@ -16,13 +16,13 @@ document.body.addEventListener('click', (e) => {
 			okButton.classList.add('inherit');
 			okButton.classList.add('common');
 			okButton.classList.add('id'+ids);
-			okButton.innerText = '✔️';
+			okButton.innerText = '✅';
 			
 			const cancleButton = document.createElement('button');
 			cancleButton.classList.add('inherit');
 			cancleButton.classList.add('common');
 			cancleButton.classList.add('id'+ids);
-			cancleButton.innerText = '✖️';
+			cancleButton.innerText = '🗑️';
 			cancleButton.name = ids;
 			
 			++ids;
@@ -32,43 +32,28 @@ document.body.addEventListener('click', (e) => {
 		}
 	}
 	
-	else if(e.target.innerText === '✔️'){
+	else if(e.target.innerText === '✅'){
 		
 		const oldTask = document.createElement('textarea');
 		oldTask.placeholder = document.getElementsByClassName(`${e.target.classList[2]}`)[0].value;
 		oldTask.disabled = true;
 		oldTask.classList.add('inherit');
 		oldTask.classList.add('common');
-		/*
-		const undoButton = document.createElement('button');
-		undoButton.classList.add('inherit');
-		undoButton.classList.add('common');
-		undoButton.innerText = '↩️';
 		
-		const cancleButton = document.createElement('button');
-		cancleButton.classList.add('inherit');
-		cancleButton.classList.add('common');
-		cancleButton.innerText = '✖️';
-		*/
 		document.getElementById('done').appendChild(oldTask);
-		// document.getElementById('done').appendChild(undoButton);
-		// document.getElementById('done').appendChild(cancleButton);
 		
 		document.querySelectorAll(`.${e.target.classList[2]}`).forEach(element => {
 			element.remove();
 		});
 	}
 	
-	else if(e.target.innerText === '✖️'){
+	else if(e.target.innerText === '🗑️'){
 		document.querySelectorAll(`.${e.target.classList[2]}`).forEach(element => {
 			element.remove();
 		});
 	}
 	
-	else if(e.target.innerText === '↩️'){
-		
-		document.querySelectorAll(`.${e.target.classList[2]}`).forEach(element => {
-			element.remove();
-		});
+	else{
+		alert('hello');
 	}
 });

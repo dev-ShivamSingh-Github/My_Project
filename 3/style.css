@@ -20,11 +20,12 @@ body, .inherit{
 }
 .common{
 	width: -webkit-fill-available;
-	border: 1px solid var(--text);
+	border: none;
 	border-radius: 20px;
 	font-size: 2em;
 }
 textarea{
+	border: 2px solid var(--text) !important;
 	resize: none;
 	box-sizing: border-box;
 	field-sizing: content;
@@ -34,10 +35,10 @@ textarea{
 	grid-template-rows: auto;
 }
 #inp_container{
-	grid-template-columns: 1.8fr 0.2fr;
+	grid-template-columns: 1.7fr 0.3fr;
 }
 #undone{
-	grid-template-columns: 1.8fr 0.1fr 0.1fr;
+	grid-template-columns: 2.0fr 0.5fr 0.5fr;
 }
 #done{
 	grid-template-columns: 1.8fr, 0.1fr 0.1fr;
