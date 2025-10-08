@@ -10,26 +10,35 @@
 		--bg: #333333;
 	}
 }
-body, #task, #add{
+body, .inherit{
 	margin:1%;
 	padding:1%;
 	font-family: "Source Sans Pro",sans-serif;
 	background-color: var(--bg);
 	color: var(--text);
+	user-select: none;
 }
 .common{
 	width: -webkit-fill-available;
 	border: 1px solid var(--text);
-	border-radius: 15px;
-	font-size: 3em;
+	border-radius: 20px;
+	font-size: 2em;
 }
 textarea{
 	resize: none;
 	box-sizing: border-box;
 	field-sizing: content;
 }
-.inp_container{
+#inp_container, #undone, #done{
 	display: grid;
-	grid-template-columns: 0.8fr 0.2fr;
 	grid-template-rows: auto;
+}
+#inp_container{
+	grid-template-columns: 1.8fr 0.2fr;
+}
+#undone{
+	grid-template-columns: 1.8fr 0.1fr 0.1fr;
+}
+#done{
+	grid-template-columns: 1.8fr, 0.1fr 0.1fr;
 }
