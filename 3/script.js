@@ -54,6 +54,6 @@ document.body.addEventListener('click', (e) => {
 	}
 	
 	else{
-		alert('hello');
+		// alert('hello');
 	}
 });
