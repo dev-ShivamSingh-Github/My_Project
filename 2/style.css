@@ -10,15 +10,17 @@
 		--bg: #333333;
 	}
 }
-body{
+*{
 	margin:0;
 	padding:0;
 	font-family: "Source Sans Pro",sans-serif;
 	background-color: var(--bg);
 	color: var(--text);
 	user-select: none;
+	-webkit-tap-highlight-color: transparent;
 }
 div{
+	align-content: center;
 	text-align:center;
 	margin:0.2%;
 	padding:0.2%;
@@ -30,13 +32,11 @@ table{
 #hide{
 	display:none;
 	width:100%;
-	font-size:x-large;
+	font-size:xxx-large;
 }
 .about{
-	-webkit-tap-highlight-color: transparent;
 	border:1px solid var(--text);
 	border-radius:3px;
-	color:var(--text);
 	disabled:true;
 	width:10%;
 	padding:10%;
@@ -48,24 +48,16 @@ table{
 #you{
 	background-color:#108b8c;
 }
-.reset, .go{
-	-webkit-tap-highlight-color: transparent;
-	border:1px solid var(--text);
-	border-radius:3px;
-	background-color:var(--bg);
-	color:var(--text);
-}
 .buttons{
-	-webkit-tap-highlight-color: transparent;
-	border:1px solid var(--text);
-	border-radius:3px;
 	padding:5%;
 	margin:0.2%;
 	cursor:pointer;
-	width:5%;
-	background-color:var(--bg);
-	color:var(--text);
-	font-size:100%;
+	min-width: 70px;
+	min-height: 70px;
+}
+.buttons, .reset, .go{
+	border:1px solid var(--text);
+	border-radius:3px;
 }
 .buttons:hover, .reset:hover, .go:hover{
 	background-color:#108b8c;
