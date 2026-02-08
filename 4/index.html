@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+	<head>
+		<title>My&nbsp;Age</title>
+		<meta charset="UTF-8">
+		<meta name="author" content="Shivam Singh">
+		<meta name="description" content="What is my age?">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="./style.css">
+	</head>
+	<body>
+		<h5>Please select your date and time of birth</h5>
+		<form id="dob">
+			<input type="date" required>
+			<input type="time" placeholder="00:00">
+			<input type="submit" name="submit" value="GO">
+			<input type="reset" name="Reset" value="Check Again" disabled = "true">
+		</form>
+		<h1 id="heading"></h1>
+		<h1 id="realTime" style="display: none;">Alive for(in nano Seconds)<br><input type="number" disabled="true"></h1>
+		<script src="./script.js"></script>
+	</body>
+</html>

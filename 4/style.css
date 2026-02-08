@@ -1,0 +1,12 @@
+*{
+	color-scheme: light dark;
+	margin:2px;
+	padding:2px;
+	font-size: 100%;
+	font-family:cascadia code, arial;
+	text-align:center;
+	align-items:center;
+	align-content: center;
+	user-select: none;
+	-webkit-tap-highlight-color: transparent;
+}
