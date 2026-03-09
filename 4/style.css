@@ -10,3 +10,20 @@
 	user-select: none;
 	-webkit-tap-highlight-color: transparent;
 }
+#realTime{
+	label, input{
+		font-size: large;
+		margin: 3px;
+		padding: 3px;
+		border: none;
+		display: grid;
+		min-height: 50px;
+		border-radius: 10px;
+		grid-template-columns: 2fr 1fr;
+		box-shadow: 0px 0px 0 0.1rem gray;
+	}
+}
+form{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}

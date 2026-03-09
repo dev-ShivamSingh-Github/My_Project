@@ -14,10 +14,33 @@
 			<input type="date" required>
 			<input type="time" placeholder="00:00">
 			<input type="submit" name="submit" value="GO">
-			<input type="reset" name="Reset" value="Check Again" disabled = "true">
+			<input type="reset" name="Reset" value="Check Again" disabled="true">
 		</form>
 		<h1 id="heading"></h1>
-		<h1 id="realTime" style="display: none;">Alive for(in nano Seconds)<br><input type="number" disabled="true"></h1>
+		<h1 id="realTime" style="display: none;">
+			Alive for:
+			<label for="years">
+				<input type="number" id="years" disabled="true">Years
+			</label>
+			<label for="months">
+				<input type="number" id="months" disabled="true">Months
+			</label>
+			<label for="weeks">
+				<input type="number" id="weeks" disabled="true">Weeks
+			</label>
+			<label for="days">
+				<input type="number" id="days" disabled="true">Days
+			</label>
+			<label for="hours">
+				<input type="number" id="hours" disabled="true">Hours
+			</label>
+			<label for="minutes" >
+				<input type="number" id="minutes" disabled="true">Minutes
+			</label>
+			<label for="seconds">
+				<input type="number" id="seconds" disabled="true">Seconds
+			</label>
+		</h1>
 		<script src="./script.js"></script>
 	</body>
 </html>
