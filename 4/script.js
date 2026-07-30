@@ -32,7 +32,7 @@ form.addEventListener('submit', function (e){
 	document.getElementById("realTime").setAttribute("style", "display: initial;");
 	heading.innerText = `You are ${current.year - DTobj.year}* Years old`;
 
-	setInterval(() => {
+	window.ageCalculator = setInterval(() => {
 		current = DateTime.now();
 		stdSecond.value = Math.floor(diff().seconds);
 		stdMinute.value = diff().minutes;
@@ -46,5 +46,14 @@ form.addEventListener('submit', function (e){
 });
 
 form.addEventListener('reset', function (e){
-	window.location.reload();
+	e.preventDefault();
+	
+	clearInterval(window.ageCalculator);
+	form[0].disabled = false;
+	form[1].disabled = false;
+	form[2].disabled = false;
+	form[3].disabled = true;
+	
+	document.getElementById("realTime").setAttribute("style", "display: none;");
+	heading.innerText = null;
 });

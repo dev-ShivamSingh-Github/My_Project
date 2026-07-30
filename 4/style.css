@@ -3,7 +3,7 @@
 	margin:2px;
 	padding:2px;
 	font-size: 100%;
-	font-family:cascadia code, arial;
+	font-family:georgian;
 	text-align:center;
 	align-items:center;
 	align-content: center;
@@ -24,7 +24,151 @@
 		box-shadow: 0px 0px 0 0.1rem gray;
 	}
 }
-form{
-	display: grid;
-	grid-template-columns: 1fr 1fr;
+form {
+	margin: 20px auto;
+	padding: 20px;
+	border-radius: 16px;
+	background: color-mix(in srgb, canvas, gray 10%);
+	border: 2px solid color-mix(in srgb, canvastext, transparent 86%);
+
+	/* --- 1. The Row Container --- */
+	& > div {
+		position: relative;
+		display: grid;
+		grid-template-columns: 1fr; /* Single column layout on mobile */
+		/* gap: 10px; */
+		/* padding: 15px; */
+		/* margin-bottom: 20px; */
+		border: 1px solid color-mix(in srgb, canvastext, transparent 92%);
+		border-radius: 12px;
+
+		@media (min-width: 900px) {
+			grid-template-columns: repeat(2, 1fr);
+			column-gap: 15px;
+		}
+
+		/* --- 2. Label Settings --- */
+		label {
+			/* On mobile, let it naturally sit first */
+			width: 100%;
+			min-height: 65px;
+			font-size: 1.1rem;
+			background-color: color-mix(in srgb, canvastext, transparent 90%);
+			border-radius: 10px;
+			cursor: help;
+		}
+
+		/* --- 3. Tooltip (Sibling Help Text Fix) --- */
+		.helptext {
+			display: none;
+			position: absolute;
+			z-index: 10;
+			background-color: #222;
+			color: #fff;
+			padding: 8px 12px;
+			border-radius: 6px;
+			font-size: 0.85rem;
+			font-weight: normal;
+			text-transform: none;
+			white-space: nowrap;
+			box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+			/* Mobile positioning: sits neatly over mobile-sized label */
+			bottom: calc(100% - 5px); 
+			left: 15px; 
+		}
+
+		.helptext::after {
+			content: "";
+			position: absolute;
+			top: 100%;
+			left: 30px;
+			border-width: 6px;
+			border-style: solid;
+			border-color: #222 transparent transparent transparent;
+		}
+
+		label:hover ~ .helptext {
+			display: block;
+		}
+	}
+
+	/* --- Shared Element Styling Specs --- */
+	input
+	{
+		appearance: none;
+		-webkit-appearance: none;
+		min-height: 65px;
+		font-size: 1.1rem;
+		border-radius: 10px;
+		background: canvas;
+		border: 2px solid color-mix(in srgb, canvastext, transparent 80%);
+		transition: all 0.25s ease;
+		color: canvastext;
+	}
+
+	input:focus
+	{
+		outline: none;
+		border-color: #00ff7b;
+		box-shadow: inset 0px 0px 7px 2px #00ff7b;
+	}
+
+	/* Button */
+	input[type="submit"]{
+		background-color: #3a86ff;
+	}
+	input[type="reset"]{
+		background-color: #ff3b3b;
+	}
+	
+	input[type="submit"],
+	input[type="reset"]
+	{
+		appearance: none;
+		width: -webkit-fill-available;
+		min-height: 60px;
+		color: white;
+		border: none;
+		border-radius: 10px;
+		font-size: 1.5rem;
+		font-weight: bold;
+		cursor: pointer;
+		transition: transform 0.1s, filter 0.2s;
+	}
+
+	input[type="submit"]:disabled,
+	input[type="reset"]:disabled,
+	{
+		opacity: 0.45;
+		cursor: not-allowed;
+		pointer-events: none; /* Prevents clicks, hover, and active states */
+		filter: none;         /* Disables any hover brightness */
+		transform: none;      /* Disables active click animations */
+		box-shadow: none;
+	}
+
+	/* 2. Soft-contrast border/background for disabled states in light/dark mode */
+	input[type="submit"]:disabled,
+	input[type="reset"]:disabled {
+		background-color: color-mix(in srgb, canvastext, transparent 80%);
+		color: color-mix(in srgb, canvastext, transparent 50%);
+	}
+
+	input[type="submit"]:hover,
+	input[type="reset"]:hover
+	{
+		filter: brightness(1.25);
+	}
+
+	input[type="submit"]:active,
+	input[type="reset"]:active
+	{
+		transform: scale(0.98);
+	}
+
+	input:not([type="submit"])::placeholder,
+	input:not([type="reset"])::placeholder
+	{
+		opacity: 0.5;
+	}
 }
