@@ -50,7 +50,7 @@ form {
 		/* --- 2. Label Settings --- */
 		label {
 			/* On mobile, let it naturally sit first */
-			width: 100%;
+			width: -webkit-fill-available;
 			min-height: 65px;
 			font-size: 1.1rem;
 			background-color: color-mix(in srgb, canvastext, transparent 90%);
@@ -95,8 +95,8 @@ form {
 	/* --- Shared Element Styling Specs --- */
 	input
 	{
-		appearance: none;
 		-webkit-appearance: none;
+		width: -webkit-fill-available;
 		min-height: 65px;
 		font-size: 1.1rem;
 		border-radius: 10px;
